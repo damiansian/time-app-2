@@ -2,7 +2,7 @@
   "name": "my-spectrum-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/damiansian/time-app-2.git",
+  "homepage": "https://damiansian.github.io/time-app-2",
   "dependencies": {
     "@adobe/react-spectrum": "^3.39.0",
     "@react-aria/focus": "^3.19.1",
