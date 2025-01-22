@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/damiansian/time-app-2.git/static/css/main.508bd088.css",
-    "main.js": "/damiansian/time-app-2.git/static/js/main.13573fd0.js",
-    "static/js/488.4e4f7682.chunk.js": "/damiansian/time-app-2.git/static/js/488.4e4f7682.chunk.js",
-    "index.html": "/damiansian/time-app-2.git/index.html",
-    "main.508bd088.css.map": "/damiansian/time-app-2.git/static/css/main.508bd088.css.map",
-    "main.13573fd0.js.map": "/damiansian/time-app-2.git/static/js/main.13573fd0.js.map",
-    "488.4e4f7682.chunk.js.map": "/damiansian/time-app-2.git/static/js/488.4e4f7682.chunk.js.map"
+    "main.css": "/time-app-2/static/css/main.508bd088.css",
+    "main.js": "/time-app-2/static/js/main.0a775adc.js",
+    "static/js/488.4e4f7682.chunk.js": "/time-app-2/static/js/488.4e4f7682.chunk.js",
+    "index.html": "/time-app-2/index.html",
+    "main.508bd088.css.map": "/time-app-2/static/css/main.508bd088.css.map",
+    "main.0a775adc.js.map": "/time-app-2/static/js/main.0a775adc.js.map",
+    "488.4e4f7682.chunk.js.map": "/time-app-2/static/js/488.4e4f7682.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.508bd088.css",
-    "static/js/main.13573fd0.js"
+    "static/js/main.0a775adc.js"
   ]
 }
