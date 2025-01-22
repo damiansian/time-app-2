@@ -1,0 +1,63 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TableView {
+  width: 100%; /* Ensure the TableView takes full width */
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+h1 {
+  text-align: center; /* Center the h1 element */
+}
+
+body, html {
+  width: 100%; /* Ensure the body and html take full width */
+  margin: 0;
+  padding: 0;
+}
+
+.thumbs-up {
+  color: #008000; /* Green color for Thumbs Up */
+}
+
+.thumbs-down {
+  color: #FF0000; /* Red color for Thumbs Down */
+}
+
+.thumbs-up svg {
+  fill: #008000; /* Green color for Thumbs Up */
+}
+
+.thumbs-down svg {
+  fill: #FF0000; /* Red color for Thumbs Down */
+}
