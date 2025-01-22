@@ -10,7 +10,7 @@ import './App.css';
 function App() {
   return (
     <Provider theme={defaultTheme}>
-      <Flex direction="column" alignItems="center" justifyContent="center" height="100vh" width="100%">
+      <Flex direction="column" alignItems="center" justifyContent="flex-start" minHeight="100vh" width="100%">
         <View className="App" padding="size-200" width="100%">
           <main>
             <h1>Select a day and time</h1>
