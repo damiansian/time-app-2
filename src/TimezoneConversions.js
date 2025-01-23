@@ -1,7 +1,7 @@
 import React from 'react';
 import { TableView, TableHeader, TableBody, Column, Row, Cell, View } from '@adobe/react-spectrum';
-import ThumbsUp from '@spectrum-icons/workflow/ThumbUp';
-import ThumbsDown from '@spectrum-icons/workflow/ThumbDown';
+import CheckmarkCircle from '@spectrum-icons/workflow/CheckmarkCircle';
+import CloseCircle from '@spectrum-icons/workflow/CloseCircle';
 import './App.css'; // Ensure the CSS file is imported
 
 function TimezoneConversions({ selectedDateTime }) {
@@ -17,11 +17,12 @@ function TimezoneConversions({ selectedDateTime }) {
 
   const conversions = cities.map(({ city, zone }) => {
     const convertedTime = selectedDateTime.setZone(zone);
+    const isWorkingHour = convertedTime.weekday >= 1 && convertedTime.weekday <= 5 && convertedTime.hour >= 9 && convertedTime.hour < 17;
     return {
       city,
       time: convertedTime.toFormat('hh:mm a'),
-      day: convertedTime.toFormat('cccc'),
-      workingHour: convertedTime.hour >= 9 && convertedTime.hour < 17,
+      day: convertedTime.toFormat('ccc'), // Abbreviate the day to three letters
+      isWorkingHour,
     };
   });
 
@@ -31,30 +32,32 @@ function TimezoneConversions({ selectedDateTime }) {
       <View width="100%">
         <TableView aria-label="Timezone Conversions" width="100%">
           <TableHeader>
-            <Column key="status" allowsResizing maxWidth={50}> </Column>
-            <Column key="city" allowsResizing>City</Column>
-            <Column key="day" allowsResizing>Day</Column>
-            <Column key="time" allowsResizing>Time</Column>
+            <Column key="city" width="1fr">City</Column>
+            <Column key="day" width="1fr">Day</Column>
+            <Column key="time" width="1fr">Time</Column>
+            <Column key="workingHours" width="1fr">
+              <span className="sr-only">Working hours</span>
+            </Column>
           </TableHeader>
           <TableBody>
             {conversions.map((conversion, index) => (
               <Row key={index}>
-                <Cell>
-                  {conversion.workingHour ? (
-                    <>
-                      <ThumbsUp aria-hidden="true" UNSAFE_className="thumbs-up" />
-                      <span className="sr-only">Working hour</span>
-                    </>
-                  ) : (
-                    <>
-                      <ThumbsDown aria-hidden="true" UNSAFE_className="thumbs-down" />
-                      <span className="sr-only">Non-Working hour</span>
-                    </>
-                  )}
-                </Cell>
                 <Cell>{conversion.city}</Cell>
                 <Cell>{conversion.day}</Cell>
                 <Cell>{conversion.time}</Cell>
+                <Cell>
+                  {conversion.isWorkingHour ? (
+                    <>
+                      <CheckmarkCircle aria-hidden="true" className="checkmark-circle" />
+                      <span className="sr-only">In working hours</span>
+                    </>
+                  ) : (
+                    <>
+                      <CloseCircle aria-hidden="true" className="close-circle" />
+                      <span className="sr-only">Non-working hours</span>
+                    </>
+                  )}
+                </Cell>
               </Row>
             ))}
           </TableBody>

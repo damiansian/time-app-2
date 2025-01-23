@@ -36,33 +36,38 @@ function DateTimePicker() {
           label="Date"
           value={selectedDate}
           onChange={setSelectedDate}
+          width="size-5000" // Set the width directly on the DatePicker
         />
-        <Flex direction="row" gap="size-200">
-          <Picker label="Hour" selectedKey={selectedHour} onSelectionChange={setSelectedHour}>
-            <Item key="1">1</Item>
-            <Item key="2">2</Item>
-            <Item key="3">3</Item>
-            <Item key="4">4</Item>
-            <Item key="5">5</Item>
-            <Item key="6">6</Item>
-            <Item key="7">7</Item>
-            <Item key="8">8</Item>
-            <Item key="9">9</Item>
-            <Item key="10">10</Item>
-            <Item key="11">11</Item>
-            <Item key="12">12</Item>
-          </Picker>
-          <Picker label="Minutes" selectedKey={selectedMinutes} onSelectionChange={setSelectedMinutes}>
-            <Item key="00">00</Item>
-            <Item key="15">15</Item>
-            <Item key="30">30</Item>
-          </Picker>
-          <RadioGroup label="AM/PM" selectedKey={selectedAmPm} onChange={setSelectedAmPm}>
-            <Radio value="AM">AM</Radio>
-            <Radio value="PM">PM</Radio>
-          </RadioGroup>
-        </Flex>
-        <Button variant="cta" onPress={handleConvert}>Convert</Button>
+        <View>
+          <Flex direction="row" gap="size-200">
+            <Picker label="Hour" selectedKey={selectedHour} onSelectionChange={setSelectedHour}>
+              <Item key="1">1</Item>
+              <Item key="2">2</Item>
+              <Item key="3">3</Item>
+              <Item key="4">4</Item>
+              <Item key="5">5</Item>
+              <Item key="6">6</Item>
+              <Item key="7">7</Item>
+              <Item key="8">8</Item>
+              <Item key="9">9</Item>
+              <Item key="10">10</Item>
+              <Item key="11">11</Item>
+              <Item key="12">12</Item>
+            </Picker>
+            <Picker label="Minutes" selectedKey={selectedMinutes} onSelectionChange={setSelectedMinutes}>
+              <Item key="00">00</Item>
+              <Item key="15">15</Item>
+              <Item key="30">30</Item>
+            </Picker>
+            <RadioGroup label="AM/PM" selectedKey={selectedAmPm} onChange={setSelectedAmPm}>
+              <Radio value="AM">AM</Radio>
+              <Radio value="PM">PM</Radio>
+            </RadioGroup>
+          </Flex>
+        </View>
+        <View alignSelf="flex-start">
+          <Button variant="cta" onPress={handleConvert}>Convert</Button>
+        </View>
         {showConversions && <TimezoneConversions selectedDateTime={getSelectedDateTime()} />}
       </Flex>
     </View>

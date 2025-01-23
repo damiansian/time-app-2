@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #f0f0f0; /* Example background color */
+  min-height: 100vh; /* Ensure the background color stretches to the bottom */
 }
 
 .App-logo {
@@ -36,6 +38,18 @@
   border: 0;
 }
 
+.checkmark-circle {
+  width: 16px; /* Smaller size for the icon */
+  height: 16px; /* Smaller size for the icon */
+  fill: #008000; /* Green color for working hours */
+}
+
+.close-circle {
+  width: 16px; /* Smaller size for the icon */
+  height: 16px; /* Smaller size for the icon */
+  fill: #FF0000; /* Red color for non-working hours */
+}
+
 h1 {
   text-align: center; /* Center the h1 element */
 }
@@ -44,20 +58,4 @@ body, html {
   width: 100%; /* Ensure the body and html take full width */
   margin: 0;
   padding: 0;
-}
-
-.thumbs-up {
-  color: #008000; /* Green color for Thumbs Up */
-}
-
-.thumbs-down {
-  color: #FF0000; /* Red color for Thumbs Down */
-}
-
-.thumbs-up svg {
-  fill: #008000; /* Green color for Thumbs Up */
-}
-
-.thumbs-down svg {
-  fill: #FF0000; /* Red color for Thumbs Down */
 }
