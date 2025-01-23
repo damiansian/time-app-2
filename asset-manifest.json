@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/time-app-2/static/css/main.508bd088.css",
-    "main.js": "/time-app-2/static/js/main.1a0ffb9a.js",
+    "main.css": "/time-app-2/static/css/main.add0c1b9.css",
+    "main.js": "/time-app-2/static/js/main.5dd1adc8.js",
     "static/js/488.4e4f7682.chunk.js": "/time-app-2/static/js/488.4e4f7682.chunk.js",
     "index.html": "/time-app-2/index.html",
-    "main.508bd088.css.map": "/time-app-2/static/css/main.508bd088.css.map",
-    "main.1a0ffb9a.js.map": "/time-app-2/static/js/main.1a0ffb9a.js.map",
+    "main.add0c1b9.css.map": "/time-app-2/static/css/main.add0c1b9.css.map",
+    "main.5dd1adc8.js.map": "/time-app-2/static/js/main.5dd1adc8.js.map",
     "488.4e4f7682.chunk.js.map": "/time-app-2/static/js/488.4e4f7682.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.508bd088.css",
-    "static/js/main.1a0ffb9a.js"
+    "static/css/main.add0c1b9.css",
+    "static/js/main.5dd1adc8.js"
   ]
 }
