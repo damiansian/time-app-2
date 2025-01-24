@@ -39,15 +39,39 @@
 }
 
 .checkmark-circle {
-  width: 16px; /* Smaller size for the icon */
-  height: 16px; /* Smaller size for the icon */
-  fill: #008000; /* Green color for working hours */
+  width: 16px !important; /* Smaller size for the icon */
+  height: 16px !important; /* Smaller size for the icon */
+  color: #008000 !important; /* Green color for working hours */
+}
+
+.checkmark-circle svg {
+  fill: #008000 !important; /* Green color for working hours */
 }
 
 .close-circle {
-  width: 16px; /* Smaller size for the icon */
-  height: 16px; /* Smaller size for the icon */
-  fill: #FF0000; /* Red color for non-working hours */
+  width: 16px !important; /* Smaller size for the icon */
+  height: 16px !important; /* Smaller size for the icon */
+  color: #FF0000 !important; /* Red color for non-working hours */
+}
+
+.close-circle svg {
+  fill: #FF0000 !important; /* Red color for non-working hours */
+}
+
+.city-name {
+  display: inline;
+}
+
+@media (max-width: 640px) {
+  .city-name {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .city-column {
+    width: 1fr !important;
+  }
 }
 
 h1 {

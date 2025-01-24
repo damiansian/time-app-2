@@ -6,19 +6,20 @@ import './App.css'; // Ensure the CSS file is imported
 
 function TimezoneConversions({ selectedDateTime }) {
   const cities = [
-    { city: 'San Jose', zone: 'America/Los_Angeles' },
-    { city: 'Austin', zone: 'America/Chicago' },
-    { city: 'NYC', zone: 'America/New_York' },
-    { city: 'London', zone: 'Europe/London' },
-    { city: 'Bucharest', zone: 'Europe/Bucharest' },
-    { city: 'Bangalore', zone: 'Asia/Kolkata' },
-    { city: 'Tokyo', zone: 'Asia/Tokyo' },
+    { city: 'San Jose', zone: 'America/Los_Angeles', abbreviation: 'PST' },
+    { city: 'Austin', zone: 'America/Chicago', abbreviation: 'CST' },
+    { city: 'NYC', zone: 'America/New_York', abbreviation: 'EST' },
+    { city: 'London', zone: 'Europe/London', abbreviation: 'GMT' },
+    { city: 'Bucharest', zone: 'Europe/Bucharest', abbreviation: 'EET' },
+    { city: 'Bangalore', zone: 'Asia/Kolkata', abbreviation: 'IST' },
+    { city: 'Tokyo', zone: 'Asia/Tokyo', abbreviation: 'JST' },
   ];
 
-  const conversions = cities.map(({ city, zone }) => {
+  const conversions = cities.map(({ city, zone, abbreviation }) => {
     const convertedTime = selectedDateTime.setZone(zone);
     const isWorkingHour = convertedTime.weekday >= 1 && convertedTime.weekday <= 5 && convertedTime.hour >= 9 && convertedTime.hour < 17;
     return {
+      abbreviation,
       city,
       time: convertedTime.toFormat('hh:mm a'),
       day: convertedTime.toFormat('ccc'), // Abbreviate the day to three letters
@@ -32,28 +33,31 @@ function TimezoneConversions({ selectedDateTime }) {
       <View width="100%">
         <TableView aria-label="Timezone Conversions" width="100%">
           <TableHeader>
-            <Column key="city" width="1fr">City</Column>
+            <Column key="city" width="2fr" UNSAFE_className="city-column">City</Column>
             <Column key="day" width="1fr">Day</Column>
-            <Column key="time" width="1fr">Time</Column>
-            <Column key="workingHours" width="1fr">
+            <Column key="time" width="1.5fr">Time</Column>
+            <Column key="workingHours" width="0.5fr">
               <span className="sr-only">Working hours</span>
             </Column>
           </TableHeader>
           <TableBody>
             {conversions.map((conversion, index) => (
               <Row key={index}>
-                <Cell>{conversion.city}</Cell>
+                <Cell>
+                  <span>{conversion.abbreviation}</span>
+                  <span className="city-name"> – {conversion.city}</span>
+                </Cell>
                 <Cell>{conversion.day}</Cell>
                 <Cell>{conversion.time}</Cell>
                 <Cell>
                   {conversion.isWorkingHour ? (
                     <>
-                      <CheckmarkCircle aria-hidden="true" className="checkmark-circle" />
+                      <CheckmarkCircle aria-hidden="true" UNSAFE_className="checkmark-circle" />
                       <span className="sr-only">In working hours</span>
                     </>
                   ) : (
                     <>
-                      <CloseCircle aria-hidden="true" className="close-circle" />
+                      <CloseCircle aria-hidden="true" UNSAFE_className="close-circle" />
                       <span className="sr-only">Non-working hours</span>
                     </>
                   )}
