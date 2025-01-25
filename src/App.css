@@ -68,11 +68,6 @@
   }
 }
 
-@media (max-width: 600px) {
-  .city-column {
-    flex: 1 !important;
-  }
-}
 
 h1 {
   text-align: center; /* Center the h1 element */
