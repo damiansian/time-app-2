@@ -2,6 +2,7 @@
   text-align: center;
   background-color: #f0f0f0; /* Example background color */
   min-height: 100vh; /* Ensure the background color stretches to the bottom */
+  overflow: hidden; /* Prevent scrolling */
 }
 
 .App-logo {
@@ -80,6 +81,8 @@ h1 {
 
 body, html {
   width: 100%; /* Ensure the body and html take full width */
+  height: 100%; /* Ensure the body and html take full height */
   margin: 0;
   padding: 0;
+  overflow: hidden; /* Prevent scrolling */
 }
