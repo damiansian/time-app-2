@@ -33,10 +33,10 @@ function TimezoneConversions({ selectedDateTime }) {
       <View width="100%">
         <TableView aria-label="Timezone Conversions" width="100%">
           <TableHeader>
-            <Column key="city" style={{ width: '2fr' }}>City</Column>
-            <Column key="day" style={{ width: '1fr' }}>Day</Column>
-            <Column key="time" style={{ width: '1.5fr' }}>Time</Column>
-            <Column key="workingHours" style={{ width: '0.5fr' }}>
+            <Column key="city" defaultWidth="2fr" align="start" UNSAFE_className="city-column">City</Column>
+            <Column key="day" defaultWidth="1fr" align="start">Day</Column>
+            <Column key="time" defaultWidth="1.5fr" align="start">Time</Column>
+            <Column key="workingHours" defaultWidth="0.5fr" align="end">
               <span className="sr-only">Working hours</span>
             </Column>
           </TableHeader>
