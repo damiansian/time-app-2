@@ -70,7 +70,7 @@
 
 @media (max-width: 600px) {
   .city-column {
-    width: 100% !important;
+    width: 1fr !important;
   }
 }
 
