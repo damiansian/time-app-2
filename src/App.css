@@ -42,21 +42,21 @@
 .checkmark-circle {
   width: 16px !important; /* Smaller size for the icon */
   height: 16px !important; /* Smaller size for the icon */
-  color: #008000 !important; /* Green color for working hours */
+  color: #007700 !important; /* Adjusted green color for working hours */
 }
 
 .checkmark-circle svg {
-  fill: #008000 !important; /* Green color for working hours */
+  fill: #007700 !important; /* Adjusted green color for working hours */
 }
 
 .close-circle {
   width: 16px !important; /* Smaller size for the icon */
   height: 16px !important; /* Smaller size for the icon */
-  color: #FF0000 !important; /* Red color for non-working hours */
+  color: #CC0000 !important; /* Adjusted red color for non-working hours */
 }
 
 .close-circle svg {
-  fill: #FF0000 !important; /* Red color for non-working hours */
+  fill: #CC0000 !important; /* Adjusted red color for non-working hours */
 }
 
 .city-name {
